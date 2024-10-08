@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        /*Esse é o estilo do corpo do meu site*/
+        body {
+            background-color: #E6E3F7; 
+            margin: 0;
+            font-family:'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            height: 100vh; 
+        }
+        /*aqui é o estilo da classe container*/
+        .container {
+            display: flex; 
+            align-items: center; 
+            text-align: center;
+            margin-top: 40px; 
+        }
+        /*aqui é o estilo da imagem que eu escolhi, consigui definir tamanho, formato, borda*/
+        .imagemeu {
+            width: 200px;
+            height: 300px; 
+            border-radius: 5px;
+            margin-right: 20px;
+            object-fit: cover; 
+        }
+        /*aqui é o estilo dos meus titulos*/
+        h1 {
+            color: black; 
+            margin: 0; 
+        }
+
+        nav {
+            margin-top: 20px; 
+        }
+        /*aqui é o estilo da minha lista*/
+        nav ul {
+            list-style-type: none; 
+            padding: 0; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            text-decoration: none; 
+            color: black; 
+            padding: 10px 15px; 
+            border-radius: 20px; 
+            background-color: #8DA0E0;
+            transition: background-color 0.3s; 
+        }
+        /*aqui é pra definir a cor de quando eu passar o mouse*/
+        nav a:hover {
+            background-color: #e0e0e0; 
+        }
+
+        .content {
+            display: none; 
+            text-align: left;
+            margin-top: 50px; 
+        }
+
+        .active {
+            display: block; 
+        }
+        .form-group {
+            margin-bottom: 20px; 
+        }
+
+        label {
+            display: block; 
+            margin-bottom: 5px;
+            color: black;
+        }
+        /*aqui é o estilo do meu input*/
+        input[type="text"] {
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+
+        input[type="text"]:focus {
+            border-color: #007BFF; 
+            outline: none; 
+        }
+        .radio-container {
+            display: flex; /* Alinha os inputs horizontalmente */
+            align-items: center; /* Alinha verticalmente */
+        }
+
+        input[type="radio"] {
+            margin-right: 5px; 
+        }
+        input[type="date"] {
+            width: 100%; /* Largura total */
+            padding: 10px; /* Espaço interno */
+            border: 1px solid #ccc; /* Borda cinza clara */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+
+        input[type="date"]:focus {
+            border-color: #007BFF; 
+            outline: none; /
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img class="imagemeu" src="imagens/cachos.jpg" alt="Descrição da imagem">
+        <div>
+            <h1>Bibiana Pedrolo</h1>
+            <br>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" onclick="showContent('sobre')">Sobre Mim</a></li>
+                    <li><a href="#" onclick="showContent('portfolio')">Portfólio</a></li>
+                    <li><a href="#" onclick="showContent('formacao')">Formação</a></li>
+                    <li><a href="#" onclick="showContent('contato')">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div id="sobre" class="content">
+        <h2>Sobre Mim</h2>
+        <p>Eu me chamo Bibiana, tenho 20 anos e sou taurina. Gosto muito de conversar,<br>
+    apesar de que às vezes pareça tímida para muitas pessoas, só uma questão de convivência.<br>
+    Gosto muito de ir viajar e aproveitar os pequenos grandes momentos que a vida proporciona. <br>
+    <h3>Aqui vão alguns dos meus hobbies:</h3></p>
+    <ul>
+        <li>Acampar</li>
+        <li>Ler</li>
+        <li>Assistir séries e filmes</li>
+        <li>Viajar</li>
+        <li>Dormir</li>
+        <li>Sair</li>
+    </ul>
+    </div>
+
+    <div id="portfolio" class="content">
+        <h2>Portfólio</h2>
+        <p>Projeto Front-end: <a href="https://bibianapedrolo77.github.io/projeto-pokemon/" target="_blank">Projeto Pokemon</a>.</p>
+
+        
+    </div>
+
+    <div id="formacao" class="content">
+        <h2>Formação</h2>
+        <p>Tenho formação técnica em informática desde agosto de 2023, onde entendi que a área <br>
+            da técnologia é o meu lugar. Atualmente curso ADS pela instituição Uninter, onde estou<br>
+            me aperfeiçoando cada vez mais, com trabalhos, estudos. Já tenho experiência com formatação<br>
+            limpeza de computadores, realizando nos dispositivos de pessoas conhecidas. Estou cursando também<br>
+            o curso de inglês, o que está me proporcionando entendimento de leitura, conversas claras de séries,<br>
+            vídeos, etc. Tenho dificuldade em desenvolver a minha fala, mas estou no caminho. 
+        </p>
+        
+        
+        <p><strong>Concluída</strong><br>
+             Técnico informática - TI</p>
+
+        <p><strong>Cursando</strong><br>
+            Análise e Desenvolvimentos de Sistemas - ADS <br>
+            Inglês</p>
+    </div>
+
+    <div id="contato" class="content">
+        <h2>Contato</h2>
+        <form>
+             <label for="nome">Nome:</label>
+             <input type="text" id="nome">
+                <br>
+                <br>
+             <label for="email">E-mail:</label>
+             <input type="text" id="email">
+                 <br>
+                 <br>
+             <label for="telefone">Telefone:</label>
+             <input type="text" id="telefone">
+                 <br>
+                 <br>
+                 <div class="form-group">
+                    <label>Gênero:</label>
+                    <div class="radio-container">
+                        <input type="radio" id="genero-feminino" name="genero" value="Feminino">
+                        <label for="genero-feminino">Feminino</label>
+                        
+                        <input type="radio" id="genero-masculino" name="genero" value="Masculino">
+                        <label for="genero-masculino">Masculino</label>
+                    </div>
+                 <br>
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento">
+                 
+        </form>
+    </div>
+
+    <script>
+        function showContent(section) {
+            // Esconde todas as seções
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Mostra a seção correspondente
+            const activeContent = document.getElementById(section);
+            activeContent.classList.add('active');
+        }
+
+        // Exibe a seção "Sobre Mim" por padrão ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            showContent('sobre');
+        });
+    </script>
+
+</body>
+</html>
